@@ -1,0 +1,278 @@
+:root {
+
+    --bodyelement-background: #6497b1;
+    --font-color: whitesmoke;
+    --heading-background: #03396c;
+
+    --font-type: Georgia, 'Times New Roman', Times, serif;
+
+    --space: 20px;
+    --radius: 6px;
+    --border-size:2px;
+    --border-color: black;
+    --h-size: 16px;
+
+    --text-img-gap: 40px;
+
+
+}
+
+body {
+
+    color: var(--font-color);
+
+    min-height: 100vh;
+
+    background-color: rgb(179,205,224);
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    gap: 10px;
+    
+}
+
+header {
+
+    grid-area: header;
+    gap: 2px;
+
+}
+
+main {
+
+    grid-area: main;
+    gap: 2px;
+}
+
+footer {
+
+    grid-area: footer;
+
+
+    display: flex;
+    align-items: flex-end;
+
+}
+
+
+#navbar ul{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    list-style: none;
+
+}
+
+.main-text {
+
+    font-family: var(--font-type);
+    font-style: italic;
+
+    background-color: var(--bodyelement-background);
+    padding: 20px;
+    border-width: var(--border-size);
+    border-color: var(--border-color);
+    border-style: solid;
+
+    border-radius: var(--radius);
+
+}
+
+.heading {
+
+    /* font and background styling */
+
+    background-color: var(--heading-background);
+
+    font-family: var(--font-type);
+    font-size: var(--h-size);
+
+    border-radius: var(--radius);
+    padding: 10px;
+
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#main-heading {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color:rgb(1,31,75);
+    border-radius: var(--radius);
+
+    padding: 40px;
+    
+
+}
+
+#intro-container img {
+
+    display: flex;
+    justify-content: center;
+
+    border-width: var(--border-size);
+    border-color: var(--border-color);
+    border-style: solid;
+}
+
+#intro-container {
+
+    display: flex;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: var(--text-img-gap);
+
+}
+
+#bio-container {
+
+    display: flex;
+    flex-direction: row;
+    gap: var(--text-img-gap);
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+#book-container {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--text-img-gap);
+
+}
+
+#book-header {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#book-container img {
+
+    width: auto;
+    height: 200px;
+
+}
+
+#career-container {
+
+    display: flex;
+    gap: var(--text-img-gap);
+
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: row-reverse;
+
+}
+
+#thought-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--text-img-gap);
+
+}
+
+#thought-container img {
+
+    width: 300px;
+    height: auto;
+
+}
+
+#resources-text {
+
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+
+
+@media (max-width: 750px) {
+
+    .heading {
+
+        flex-direction: column;
+
+    }
+
+    #intro-container {
+
+        flex-direction: column;
+
+    }
+
+    #thought-container {
+
+        flex-direction: column;
+
+    }
+
+    #bio-container{
+
+        flex-direction: column;
+
+    }
+
+    #career-container {
+
+        flex-direction: column;
+
+    }
+
+    #thought-container img {
+
+        height: 200px;
+
+    }
+
+    .main-text {
+
+        flex-direction: column;
+
+    }
+
+    #navbar ul {
+
+        justify-content: space-between;
+        gap: 10px;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+
+    }
+
+    html {
+
+        font-size: 14px;
+
+    }
+
+}
